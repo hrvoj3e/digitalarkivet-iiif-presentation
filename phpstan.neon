@@ -2,3 +2,5 @@ includes:
 	- phpstan-baseline.neon
 parameters:
 	level: 5
+	ignoreErrors:
+		- "#is used zero times and is not analysed#"

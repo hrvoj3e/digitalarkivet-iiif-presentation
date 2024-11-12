@@ -1,0 +1,40 @@
+{
+    "name": "digitalarkivet/iiif-presentation",
+    "description": "IIIF presentation api generator",
+    "keywords": ["IIIF"],
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-4": {
+            "digitalarkivet\\iiif\\presentation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "digitalarkivet\\iiif\\presentation\\tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=8.3.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.4",
+        "mockery/mockery": "^1.6.12",
+        "phpstan/phpstan": "^1.12.7"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+             "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "phpunit": "phpunit --display-incomplete --display-skipped --display-deprecations --display-errors --display-notices --display-warning --display-phpunit-deprecations",
+        "phpstan": "phpstan analyze src --no-progress --memory-limit=-1 -c phpstan.neon",
+        "qa": [
+            "@phpunit",
+            "@phpstan"
+        ]
+    }
+}

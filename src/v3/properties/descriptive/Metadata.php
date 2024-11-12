@@ -36,6 +36,14 @@ class Metadata
 	}
 
 	/**
+	 * Returns the number of metadata items.
+	 */
+	public function getItemCount(): int
+	{
+		return count($this->metadata);
+	}
+
+	/**
 	 * Returns an array representation of the metadata descriptive property.
 	 */
 	public function toArray(): array

@@ -51,7 +51,7 @@ class Metadata
 		$array = [];
 
 		foreach ($this->metadata as $metadata) {
-			$array = [...$array, ...$metadata->toArray()];
+			$array[] = $metadata->toArray();
 		}
 
 		return $array;
